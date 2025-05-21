@@ -23,24 +23,24 @@ jobs:
 
       - name: Analyze aux_package
         run: |
-          ghdl -a --std=08 --fsynopsys DUT/aux_package.vhd
+          ghdl -a --std=08 --ieee=synopsys DUT/aux_package.vhd
 
       - name: Analyze design files
         run: |
-          ghdl -a --std=08 --fsynopsys DUT/*.vhd
+          ghdl -a --std=08 --ieee=synopsys DUT/*.vhd
 
       - name: Analyze test benches
         run: |
-          ghdl -a --std=08 --fsynopsys TB/*.vhd
+          ghdl -a --std=08 --ieee=synopsys TB/*.vhd
 
       - name: Elaborate top-level testbench
         run: |
-          ghdl -e --std=08 --fsynopsys top_tb
+          ghdl -e --std=08 --ieee=synopsys top_tb
 
       - name: Run simulation
         run: |
           mkdir -p simulations
-          ghdl -r --std=08 --fsynopsys top_tb --wave=simulations/wave.ghw
+          ghdl -r --std=08 --ieee=synopsys top_tb --wave=simulations/wave.ghw
 
       - name: Upload waveform artifact
         uses: actions/upload-artifact@v4
