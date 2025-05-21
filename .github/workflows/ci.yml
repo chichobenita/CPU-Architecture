@@ -32,8 +32,11 @@ jobs:
           ghdl -r top_tb --wave=simulations/wave.ghw
 
       # נעלה artifact של ה-waveform כדי שתוכל להוריד
-      - name: Upload waveform artifacts
+       - name: Upload waveform artifacts
         uses: actions/upload-artifact@v3
         with:
           name: waveforms
-          path: simulations/wave.ghw
+          # נשדרג ל־glob כדי לתפוס כל קובץ .ghw בתיקיה
+          path: simulations/*.ghw
+          # אם לא יימצא קובץ, רק נזהיר ולא נחסום את ה־workflow
+          if-no-files-found: warn
