@@ -11,9 +11,9 @@ on:
 jobs:
   simulate:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Install GHDL & GTKWave
         run: |
@@ -28,9 +28,8 @@ jobs:
         run: |
           ghdl -r top_tb --wave=simulations/wave.ghw
 
-      - name: Upload waveform artifacts
+      - name: Upload waveform artifact
         uses: actions/upload-artifact@v3
         with:
-          name: waveforms
-          path: simulations/*.ghw
-          if-no-files-found: warn
+          name: waveform
+          path: simulations/wave.ghw
