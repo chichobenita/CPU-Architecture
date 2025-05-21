@@ -37,10 +37,12 @@ jobs:
         run: |
           ghdl -e --std=08 --ieee=synopsys tb_top
 
-      - name: Run simulation
+      - name: Run simulation (with timeout)
         run: |
-          mkdir -p simulations
-          ghdl -r --std=08 --ieee=synopsys tb_top --wave=simulations/wave.ghw
+            mkdir -p simulations
+            ghdl -r --std=08 --ieee=synopsys tb_top \
+              --stop-time=250ns \
+              --wave=simulations/wave.ghw
 
       - name: Upload waveform artifact
         uses: actions/upload-artifact@v4
