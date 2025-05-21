@@ -35,12 +35,12 @@ jobs:
 
       - name: Elaborate top-level testbench
         run: |
-          ghdl -e --std=08 --ieee=synopsys top_tb
+          ghdl -e --std=08 --ieee=synopsys tb_top
 
       - name: Run simulation
         run: |
           mkdir -p simulations
-          ghdl -r --std=08 --ieee=synopsys top_tb --wave=simulations/wave.ghw
+          ghdl -r --std=08 --ieee=synopsys tb_top --wave=simulations/wave.ghw
 
       - name: Upload waveform artifact
         uses: actions/upload-artifact@v4
