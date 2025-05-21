@@ -29,7 +29,8 @@ jobs:
           ghdl -r top_tb --wave=simulations/wave.ghw
 
       - name: Upload waveform artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: waveform
-          path: '**/*.ghw'
+       uses: actions/upload-artifact@v4
+       with:
+         name: waveform
+         path: simulations/*.ghw
+         if-no-files-found: warn
