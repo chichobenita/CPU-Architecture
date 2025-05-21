@@ -11,6 +11,7 @@ on:
 jobs:
   simulate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -26,11 +27,13 @@ jobs:
 
       - name: Run top-level testbench
         run: |
+          # מוודאים שהתיקייה קיימת
+          mkdir -p simulations
           ghdl -r top_tb --wave=simulations/wave.ghw
 
       - name: Upload waveform artifact
-       uses: actions/upload-artifact@v4
-       with:
-         name: waveform
-         path: simulations/*.ghw
-         if-no-files-found: warn
+        uses: actions/upload-artifact@v4
+        with:
+          name: waveform
+          path: simulations/*.ghw
+          if-no-files-found: warn
