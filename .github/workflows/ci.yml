@@ -11,25 +11,28 @@ on:
 jobs:
   simulate:
     runs-on: ubuntu-latest
-
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install GHDL & GTKWave
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ghdl gtkwave
 
-      - name: Compile all VHDL
+      - name: Analyze all VHDL files
         run: |
           ghdl -a DUT/*.vhd TB/*.vhd
 
-      - name: Run top-level testbench
+      - name: Elaborate top-level testbench
         run: |
-          # מוודאים שהתיקייה קיימת
+          ghdl -e top_tb
+
+      - name: Run simulation
+        run: |
           mkdir -p simulations
-          ghdl -r top_tb --wave=simulations/wave.ghw
+          ghdl -r top_tb --wave=simulations/wave.ghw --stop-time=50us
 
       - name: Upload waveform artifact
         uses: actions/upload-artifact@v4
