@@ -30,9 +30,9 @@ begin
   -- Instantiate the top-level ALU under test
   UUT: entity work.top
     generic map (
-      n_gen  => n,
-      k_gen  => k,
-      m_gen  => m
+      n  => n,
+      k  => k,
+      m  => m
     )
     port map (
       Y      => Y,
