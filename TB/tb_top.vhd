@@ -35,14 +35,14 @@ begin
       m  => m
     )
     port map (
-      Y      => Y,
-      X      => X,
-      ALUFN  => ALUFN,
-      ALUout => ALUout,
-      Nflag  => Nflag,
-      Cflag  => Cflag,
-      Zflag  => Zflag,
-      Vflag  => Vflag
+      Y_i      => Y,
+      X_i      => X,
+      ALUFN_i  => ALUFN,
+      ALUout_o => ALUout,
+      Nflag_o  => Nflag,
+      Cflag_o  => Cflag,
+      Zflag_o  => Zflag,
+      Vflag_o  => Vflag
     );
 
   -- Stimulus process
