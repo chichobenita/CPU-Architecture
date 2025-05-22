@@ -4,7 +4,7 @@ This repository collects all of our HDL design and verification projects for the
 
 ---
 
-## Course Syllabus
+## Project Purpose & Objectives
 
 We will develop a deep understanding of:
 
