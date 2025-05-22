@@ -35,12 +35,12 @@ jobs:
 
       - name: Elaborate top-level testbench
         run: |
-          ghdl -e --std=08 --ieee=synopsys tb_top
+          ghdl -e --std=08 --ieee=synopsys top_tb
 
       - name: Run simulation (with timeout)
         run: |
             mkdir -p simulations
-            ghdl -r --std=08 --ieee=synopsys tb_top \
+            ghdl -r --std=08 --ieee=synopsys top_tb \
               --stop-time=250ns \
               --wave=simulations/wave.ghw
 
