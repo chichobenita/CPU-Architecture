@@ -27,9 +27,10 @@ We will develop a deep understanding of:
 
 ```text
 CPU-Architecture/
-├── Lab1_Concurrent/       # VHDL concurrent code: structural ALU design & test benches
-├── Lab2_Sequential/       # VHDL sequential code: behavioral counter & dynamic bound
-├── Lab3_ControlDatapath/  # Multi-cycle RISC CPU: Control FSM & Datapath integration
-├── Lab4_Pipelined/        # Pipelined MIPS core, N-stage pipeline implementation
-├── Final_MCU/             # FPGA-based MCU: MIPS core + peripheral modules & accelerators
-└── README.md              # This overview file
+├── Lab1_Concurrent/             # VHDL concurrent code: structural ALU design & test benches
+├── Lab2_Sequential/             # VHDL sequential code: behavioral counter & dynamic bound
+├── Lab3_ControlDatapath/        # Multi-cycle RISC CPU: Control FSM & Datapath integration
+├── Lab4_FPGA/                   # FPGA-Based Digital Design
+├── Lab5_Pipeline&Single-Cycle/  # Pipelined and single cycle MIPS core, N-stage pipeline implementation
+├── Final_MCU/                   # FPGA-based MCU: MIPS core + peripheral modules & accelerators
+└── README.md                    # This overview file
