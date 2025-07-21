@@ -16,7 +16,5 @@ Lab5_pipeline&Single-Cycle/
 ├── VHDL_Project/    # Synthesizable VHDL: single-cycle and pipelined CPU sources
 ├── TB/              # Single top‑level test bench (tb.vhd) for full‑system verification
 ├── SIM/             # ModelSim scripts (.do) for compile, elaborate & simulate
-├── Quartus/         # Quartus project (.qpf, .qsf, .sdc, .sof) & pin assignments
-├── SignalTap/       # SignalTap project & capture files (.stp, .stpdb)
-├── CODE/            # Assembly source code for QA tests (clauses 8d & 8e)
+├── Quartus/         # Quartus and Signal Tap project (STP, SDC, SOF bitstream)
 └── DOC/             # Documentation: Lab5.pdf full report & supplementary diagrams
