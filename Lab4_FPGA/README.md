@@ -17,10 +17,3 @@ Hardware Validation: I/O on DE10 (switches, keys, LEDs, 7‑segment)
 Signal Tap Debug for internal signal capture
 
 Repository Structure
-Lab4_FPGA/
-├── VHDL_Project/    # Synthesizable VHDL sources (top-level & submodules)
-├── TB/              # Single tb.vhd for full-system verification
-├── SIM/             # ModelSim scripts (.do) for compile & sim
-├── Quartus/         # Quartus project (QPF, QSF, SDC, SOF bitstream)
-├── SignalTap/       # Signal Tap project & .stp/.stpdb capture files
-└── DOC/             # Documentation: readme.txt & Lab4.pdf report
