@@ -18,4 +18,4 @@ Lab4_FPGA/
 ├── SIM/             # ModelSim scripts (.do) for compile & sim
 ├── Quartus/         # Quartus project (QPF, QSF, SDC, SOF bitstream)
 ├── SignalTap/       # Signal Tap project & .stp/.stpdb capture files
-└── DOC/             # Documentation: Lab4.pdf report
+└── DOC/             # Documentation: Task definition, Lab4.pdf report
