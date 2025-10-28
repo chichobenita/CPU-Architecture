@@ -16,6 +16,5 @@ Lab4_FPGA/
 ├── VHDL_Project/    # Synthesizable VHDL sources (top-level & submodules)
 ├── TB/              # Single tb.vhd for full-system verification
 ├── SIM/             # ModelSim scripts (.do) for compile & sim
-├── Quartus/         # Quartus project (QPF, QSF, SDC, SOF bitstream)
-├── SignalTap/       # Signal Tap project & .stp/.stpdb capture files
+├── Quartus/         # Quartus and Signal Tap project (STP, SDC, SOF bitstream)
 └── DOC/             # Documentation: Task definition, Lab4.pdf report
